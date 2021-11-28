@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        style="@style/TitulosVentanaPrincipal"
+        android:text="@string/toppings" />
+
+    <CheckBox
+        android:id="@+id/checkboxChocolate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Chocolate"
+        android:textColor="@color/black" />
+
+    <CheckBox
+        android:id="@+id/checkboxCanela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Canela"
+        android:textColor="@color/black" />
+
+    <TextView
+        style="@style/TitulosVentanaPrincipal"
+        android:text="Cantidad" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/botonSumarCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/indicadorCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="32dp" />
+
+        <Button
+            android:id="@+id/botonRestarCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TitulosVentanaPrincipal"
+        android:text="Precio" />
+
+    <TextView
+        android:id="@+id/indicadorPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="32dp" />
+
+    <Button
+        android:id="@+id/botonPedir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="Pedir" />
+
+
+</LinearLayout>
