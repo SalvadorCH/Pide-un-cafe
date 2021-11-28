@@ -58,4 +58,31 @@ public class MainActivity extends AppCompatActivity {private TextView indicadorC
         indicadorPrecio.setText(Double.toString(precioPedido) + " €");
     }
 
+    public void enviaMensajePedido(View v) {
+        String mensaje = "Has pedido:\n";
+        mensaje += cantidadPedidos + " cafes";
+        if (cantidadPedidos > 0) {
+            if (toppingChocolate.isChecked()) {
+                mensaje += " con chocolate";
+            }
+            if (toppingChocolate.isChecked() && toppingCanela.isChecked()) {
+                mensaje += " y";
+            }
+            if (toppingCanela.isChecked()) {
+                mensaje += " con canela";
+            }
+            mensaje += "\nEl precio es de " + precioPedido + "€";
+
+        }
+        intentEmail("asunto", mensaje);
+    }
+
+    public void intentEmail(String subject, String cuerpoMensaje) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, cuerpoMensaje);
+        startActivity(intent);
+    }
+
 }
