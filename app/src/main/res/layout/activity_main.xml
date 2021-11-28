@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
+        android:onClick="calculaPrecioDos"
         android:text="Chocolate"
         android:textColor="@color/black" />
 
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
+        android:onClick="calculaPrecioDos"
         android:text="Canela"
         android:textColor="@color/black" />
 
@@ -44,6 +46,7 @@
             android:id="@+id/botonSumarCantidad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="restaUnPedido"
             android:backgroundTint="@color/design_default_color_primary"
             android:text="-" />
 
@@ -62,6 +65,7 @@
             android:id="@+id/botonRestarCantidad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="sumaUnPedido"
             android:backgroundTint="@color/design_default_color_primary"
             android:text="+" />
 
